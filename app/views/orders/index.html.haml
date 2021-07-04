@@ -1,0 +1,41 @@
+%main
+  %header
+    %h3 Your purchases
+  - recent_order = "well well-lg"
+  - @orders.each do |order|
+    %div{class:"order order-#{order.id} #{recent_order}"}
+      %h3= link_to "Order #{order.id}", order_path(order)
+      - recent_order = 'old-orders'
+      %p Order Status: #{order.status}
+      %p Order Address:
+      %ul
+        %li #{order.address.address}
+        %li #{order.address.city.name}
+        %li #{order.address.state.abbr}
+        %li #{order.address.zipcode}
+      %table{:board => 0, :class => "table table-striped"}
+        %tbody
+          %tr
+            %td
+              %h4 Item
+            %td
+              %h4 Description
+            %td
+              %h4 Price
+            %td
+              %h4 Tax Rate
+            %td
+              %h4 Quantity
+          - order.items.group(:id).each do |item|
+            %tr{:class => "item item-#{item.id}"}
+              %td #{item.name}
+              %td #{item.description}
+              %td= number_to_currency(item.price)
+              %td= item.tax_rate.round(2).to_s + '%'
+              %td #{order.order_items.where(item_id:item.id).count}
+          %tr
+            %td
+            %td
+            %td
+            %td
+              %h4= "Total: #{number_to_currency(order.total_price)}"

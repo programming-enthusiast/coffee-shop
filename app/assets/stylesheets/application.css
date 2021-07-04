@@ -1,0 +1,278 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ img.coffee-banner {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+table {
+  margin: 0 auto;
+}
+
+td {
+  width: 250px;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+main.admin-orders-table {
+  justify-content: left;
+}
+
+main header {
+  display: flex;
+  justify-content: center;
+  width: 100%
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+.btn .add-to-cart {
+
+}
+
+.navbar {
+  border-radius: 0
+}
+
+.justify {
+  display: flex;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-right {
+  margin-right: 10px;
+}
+
+.item {
+  /*background-color: rgba(240, 240, 240, 0.5);*/
+  border-radius: 5px;
+  width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.item.small {
+  width: 300px;
+}
+
+.item.large{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-top: 50px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.item-info p {
+  display: flex;
+  flex-grow: 1;
+}
+
+.item-info h3 {
+  text-align: center;
+}
+
+.item-info footer {
+  /*display: flex;*/
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-info footer .btn {
+ width: 100px;
+}
+
+.img-box {
+    width: 200px;
+    height: 200px;
+    margin: 10px 15% 0px;
+}
+
+.img-box-large {
+    width: 40%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+.form {
+  background-color: rgba(240, 240, 240, 0.5);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.form h1 {
+  flex-grow: 1
+}
+
+.form textarea,
+.form input {
+  width: 70%
+}
+
+.form textarea {
+  height: 100px;
+}
+
+.form label {
+  width: 29%;
+}
+
+.form div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-group {
+  margin-top: 10px;
+}
+
+.add-item div {
+  display: block;
+}
+
+.form h4 {
+  text-align: center;
+}
+
+.form footer {
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  background-color: rgba(240, 240, 240, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.profile-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: 100%;
+}
+
+.profile span {
+  width: 80%
+}
+
+.profile h4 {
+  width: 20%
+}
+
+.profile footer {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.order {
+  margin: 10px;
+  /*border-style: solid;*/
+  /*border-width: medium;*/
+  /*border-color: rgba(100, 100, 100, 1);*/
+  width: 100%;
+  /*display: flex;*/
+  align-items: baseline;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.old-orders {
+  border-width: thin;
+  border-color: rgba(100, 100, 100, 0.75);
+}
+
+.form-body {
+  flex-grow: 1
+}
+
+.alert {
+  text-align: center;
+}
+
+.navbar {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+td.cart-thumbnail img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+td.cart-thumbnail {
+    width: 100px;
+}
+
+.nav > li > a > img {
+  max-width: 75px;
+  padding-bottom: 7px;
+  margin: -35px;
+  margin-right: 0px;
+}
+
+.item h4 {
+  text-align: center;
+}
+
+a.btn-xs.btn-success {
+    margin-left: 41%;
+}

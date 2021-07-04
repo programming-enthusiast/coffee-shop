@@ -1,0 +1,15 @@
+= form_for @user do |f|
+  = render partial: 'shared/errors', locals: { target: @user }
+  %section{class: 'form'}
+    .form-group
+      = f.label(:email, class:'sr-only required')
+      = f.text_field(:email, class:'form-control', placeholder: 'Email')
+    = render partial: 'password', locals: { f: f } if controller.action_name == 'new'
+    .form-group
+      = f.label(:first_name, class:'sr-only required')
+      = f.text_field(:first_name, class:'form-control', placeholder: 'First Name')
+    .form-group
+      = f.label(:last_name, class:'sr-only required')
+      = f.text_field(:last_name, class:'form-control', placeholder: 'Last Name')
+    %footer
+      = f.submit
