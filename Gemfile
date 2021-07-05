@@ -38,6 +38,8 @@ gem 'paperclip'
 gem "friendly_id", "~> 4.0.0.beta8"
 gem 'cloudinary'
 gem 'paperclip-cloudinary'
+gem "sendgrid-actionmailer"
+gem "sendgrid-ruby"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
