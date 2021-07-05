@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
     @order.items << @cart.items_for_order
     if @order.save!
       session.delete(:cart)
-      OrderMailer.order_complete(current_user)
+      OrderMailer.order_complete(current_user, "Order was successfully placed. The total price of the order #{@order.id} is $#{@order.total_price}.")
       flash[:success] = 'Order was successfully placed'
       redirect_to orders_path
     else
